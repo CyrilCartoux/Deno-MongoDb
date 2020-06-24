@@ -1,7 +1,8 @@
 import { Application } from "https://deno.land/x/oak/mod.ts";
-
+import { connect } from "./helpers/database.ts"
 import todosRoutes from './routes/todos.ts';
 
+connect();
 const app = new Application();
 
 app.use(async (ctx, next) => {
